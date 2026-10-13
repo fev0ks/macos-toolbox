@@ -8,9 +8,9 @@
 
 ## Скачать готовое приложение
 
-[**SpaceHop 1.10.1 — скачать DMG**](https://github.com/fev0ks/macos-toolbox/releases/download/spacehop-v1.10.1/SpaceHop-1.10.1-arm64.dmg) · [ZIP](https://github.com/fev0ks/macos-toolbox/releases/download/spacehop-v1.10.1/SpaceHop-1.10.1-arm64.zip) · [Страница релиза](https://github.com/fev0ks/macos-toolbox/releases/tag/spacehop-v1.10.1)
+[**SpaceHop 1.10.2 — скачать DMG**](https://github.com/fev0ks/macos-toolbox/releases/download/spacehop-v1.10.2/SpaceHop-1.10.2-arm64.dmg) · [ZIP](https://github.com/fev0ks/macos-toolbox/releases/download/spacehop-v1.10.2/SpaceHop-1.10.2-arm64.zip) · [Страница релиза](https://github.com/fev0ks/macos-toolbox/releases/tag/spacehop-v1.10.2)
 
-Apple Silicon, macOS 13–15; работа проверена на 15.7.4. Открой DMG, перетащи SpaceHop в «Программы», извлеки диск и запусти приложение. При первом запуске нужны одобрение macOS для приложения без Developer ID и разрешения «Универсальный доступ»/«Запись экрана». Подробности — в [инструкции](space_hop/README.md#скачать-готовую-сборку).
+Apple Silicon, macOS 13 или новее. Работа проверена на 15.7.4; на более новых версиях не проверена. Открой DMG, перетащи SpaceHop в «Программы», извлеки диск и запусти приложение. При первом запуске нужны одобрение macOS для приложения без Developer ID и разрешения «Универсальный доступ»/«Запись экрана». Подробности — в [инструкции](space_hop/README.md#скачать-готовую-сборку).
 
 ## Сборка
 

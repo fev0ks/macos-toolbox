@@ -44,8 +44,8 @@ These instructions apply to the whole repository. Keep application-specific impl
 
 ## Private APIs, distribution and publication
 
-- SpaceHop loads SkyLight symbols dynamically and also uses `_AXUIElementGetWindow` and undocumented Dock event fields. These are not stable public contracts; record the OS gate and the versions actually tested.
-- The current switcher is gated to macOS 13–15; native behavior was tested on macOS 15.7.4. Do not claim Intel or newer macOS support or remove the version gate without testing and adapting the implementation.
+- SpaceHop loads SkyLight symbols dynamically and also uses `_AXUIElementGetWindow` and undocumented Dock event fields. These are not stable public contracts; record the minimum deployment version and the versions actually tested.
+- The minimum deployment version is macOS 13; native behavior was tested on macOS 15.7.4. At the maintainer's request, newer macOS versions are allowed without an upper runtime version gate. Describe them as untested, not confirmed compatible. Do not add an upper version restriction unless explicitly requested. Preserve permission checks, unavailable-symbol/native-input fallback and transition failure handling. Intel remains untested and is not built by the current script.
 - Do not claim Mac App Store eligibility for this implementation. Developer ID signing/notarization and App Store review are different processes; neither a license nor a successful local build guarantees distribution approval.
 - Preserve root LICENSE and both upstream MIT notices. If importing new material, record source, revision, license and adaptations. Do not redistribute Apple frameworks or private keys.
 - Before publishing, inspect the staged diff and file list for personal paths, emails, credentials, screenshots, live-window reports and build artifacts. `.gitignore` is a guardrail, not a substitute for review.

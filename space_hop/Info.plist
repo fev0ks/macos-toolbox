@@ -6,8 +6,8 @@
   <key>CFBundleName</key><string>SpaceHop</string>
   <key>CFBundleDisplayName</key><string>SpaceHop</string>
   <key>CFBundlePackageType</key><string>APPL</string>
-  <key>CFBundleShortVersionString</key><string>1.10.1</string>
-  <key>CFBundleVersion</key><string>26</string>
+  <key>CFBundleShortVersionString</key><string>1.10.2</string>
+  <key>CFBundleVersion</key><string>27</string>
   <key>LSMinimumSystemVersion</key><string>13.0</string>
   <key>LSUIElement</key><true/>
   <key>NSHighResolutionCapable</key><true/>

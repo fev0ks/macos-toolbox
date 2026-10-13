@@ -5,7 +5,8 @@ import Darwin
 
 // Synthetic Dock gesture and Spaces bookkeeping adapted from MIT-licensed
 // jurplel/InstantSpaceSwitcher and mmathys/noswoosh. See bundled licenses.
-// This build deliberately targets macOS 13–15; newer versions need validation.
+// Minimum deployment target: macOS 13. Native behavior was tested on 15.7.4;
+// newer systems are unverified but are not blocked by an upper version gate.
 
 enum Direction: Int { case left = -1, right = 1 }
 
@@ -143,7 +144,6 @@ final class SpaceSwitcher {
     private(set) var handledHotkeys = 0
     private(set) var verifiedTransitions = 0
     var ready: Bool { tap != nil && AXIsProcessTrusted() }
-    var supported: Bool { (13...15).contains(ProcessInfo.processInfo.operatingSystemVersion.majorVersion) }
 
     init(leftMouseButtonDown: @escaping () -> Bool = {
         CGEventSource.buttonState(.combinedSessionState, button: .left)
@@ -152,7 +152,7 @@ final class SpaceSwitcher {
     }
 
     func start() -> Bool {
-        guard supported, AXIsProcessTrusted() else { return false }
+        guard AXIsProcessTrusted() else { return false }
         if let tap, CFMachPortIsValid(tap) { return true }
         stop()
         let mask = (CGEventMask(1) << CGEventType.keyDown.rawValue)
@@ -413,8 +413,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func refresh() {
-        if !switcher.supported { statusLine.title = "Эта сборка поддерживает macOS 13–15" }
-        else if !AXIsProcessTrusted() {
+        if !AXIsProcessTrusted() {
             switcher.stop()
             statusLine.title = "Нужен доступ: Универсальный доступ"
         } else if !switcher.start() { statusLine.title = "Не удалось подключить горячие клавиши" }
