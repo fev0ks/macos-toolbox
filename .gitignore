@@ -1,0 +1,37 @@
+# macOS and editor state
+.DS_Store
+._*
+.idea/
+.vscode/
+*.swp
+*.xcuserstate
+xcuserdata/
+
+# Local builds and release assets; distribute binaries through Releases
+*.app/
+*.dmg
+*.zip
+*.dSYM/
+.build/
+.swiftpm/
+build/
+DerivedData/
+
+# Development scratch data and reports that may contain window titles
+work/
+outputs/
+artifacts/
+test-results/
+local-screenshots/
+verification*.json
+*-verification.json
+*.log
+
+# Credentials and signing material
+.env
+.env.*
+!.env.example
+*.p12
+*.pfx
+*.pem
+*.key
